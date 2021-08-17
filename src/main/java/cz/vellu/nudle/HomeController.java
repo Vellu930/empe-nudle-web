@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @author vellu
  */
 @Controller
-@RequestMapping("/home")
+@RequestMapping("/")
 public class HomeController {
     @Autowired
     private MailerService mailer;
@@ -30,7 +30,7 @@ public class HomeController {
         if (result.hasErrors()) {
             throw new ValidationException("Validation exception");
         }
-        String mailTo = "5580f25f35-0092af@inbox.mailtrap.io";
+        String mailTo = "vellaipuraaa@gmail.com";
         String mailFrom = form.getEmail();
         String name = form.getFirstName() + " " + form.getSurname();
         String phone = form.getPhone();

@@ -9,12 +9,12 @@
             Dobry den, Milane!
         </p>
         <h4>
-            Mate novou zpravu od <b th:text="${name}"></b> 
+            Mate novou zpravu od <b th:text="${name}"></b>
         </h4>
         <u>Zprava od zakaznika: </u> <br/>
-        <p th:text="${message}">Cau, tak tady mas ty webovky. Kdyz nekdo vyplni formular, prijde ti tahle zprava. Muzes to zkusit sam. Dole je odkaz. </p>
+        <p th:text="${message}"></p>
         <hr>
-        <u> Kontakt na zakaznika: </u>
+        <u> Kontakt na zakaznika: </u> <br/>
         <span th:text="${'adresa: ' +adresa+ ', ' +mesto+ ', ' +psc}"></span> <br/>
         <span th:text="${'region: ' +region}"></span> <br/>
         <span th:text="${'telefon: ' + telefon}"></span> <br/>
@@ -23,12 +23,10 @@
             Zdravi, <br />
             <em>Vellu Java Service</em>
         </p>
-        <p> <b>
-                EMPE nudle <br/> </b>
-            Milan Ptacek <br/>
-            Adresa <br/>
-            telefon <br/>
-            <a href="web.heroku.com"> EMPE web </a>
+        <p>
+            <b>S pozdravem EMPE nudle <br/> </b>
+            navstivte nas EMPE web: <br/>
+            <a href="empenudle.herokuapp.com"> empenudle.herokuapp.com </a>
         </p>
     </body>
 </html>
