@@ -5,18 +5,47 @@
 
 html {
 }
+@font-face {
+  font-family: funkyFont;
+  src: url("fonts/ninifont-regular.otf");
+}
 
-.welcome {
-    padding-top: 30px;
-    margin-top: 30px;
-    margin-bottom: 20px;
+.card-img-top {
+    width: 100%;
+    height: 30vw;
+    object-fit: cover;
+}
+
+.navbar-light {
+  background-color: rgba(249, 248, 250, 0.8);
+}
+.navbar-light:hover {
+  background-color: rgba(249, 248, 250, 1);
+}
+
+.p-6 {
+    padding: 5rem !important;
+}
+.pt-6 {
+    padding-top: 5rem !important;
+}
+.jumbotron-fluid {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+.jumbotron-fluid h1 {
+    font-family: funkyFont, "Trebuchet MS", sans-serif;
+}
+.jumbotron-fluid h2 {
+    padding: 20px;
+    word-spacing: 10px;
+    font-variant-caps: all-petite-caps;
+    background-color: #ffff99;
+    border-radius: 10px;
 }
 
 form {
-    margin: 50px;
     border-color: #fff;
-    border-radius: 20px;
-    padding: 70px;
+    border-radius: 15px;
     background-color: #ffff99; 
 }
 
@@ -37,45 +66,26 @@ form {
 }
 
 .navigation123 {
-    background: rgba(255, 165, 0, 0.3);
-    color: #ffff99;
+    background: rgba(255, 165, 0, 0.5);
 }
 
-.jumbotron {
+.jumbotron-fluid {
     background-image: url("/images/eggsPhotoPix.jpg");
     background-size: cover;
-    box-shadow: 5px 5px 10px rgba(0,0,0,0.6);
+    box-shadow: 5px 5px 7px rgba(0,0,0,0.6);
     height: 500px;
-}
-
-.spacing {
-    padding-right: 50px;
 }
 
 /** about section **/
 .about {
     background-color: #fff;
     box-shadow: 5px 5px 10px rgba(0,0,0,0.6);
-    margin: 90px 30px 20px 30px;     
+    margin: 0px 30px 20px 30px;     
 }
 .about .about-box {
-    text-align: left;
     float: right;
-    width: 100%;
-    max-width: 539px;
-    padding: 40px 5px;
 }
 
-.about .about-box::after {
-    position: absolute;
-    content: "";
-    background: url(/images/rollingpin.jpg.png);
-    height: 244px;
-    width: 187px;
-    bottom: 0;
-    left: 0;
-    background-repeat: no-repeat;
-}
 .about .about-box h2 {
     font-weight: bold;
     color: darkgray;
@@ -85,7 +95,7 @@ form {
     background: #ffff99;
     border-radius: 5px;
     display: inline-block;
-    padding: 20px 30px;
+    padding: 20px;
 
 }
 .about .about-box p {
@@ -93,7 +103,7 @@ form {
     font-size: 17px;
     line-height: 26px;
     color: #000;
-    padding: 5px 0px;
+    padding: 10px;
 }
 
 .about .about-box .al p {
@@ -101,10 +111,13 @@ form {
 }
 
 .about .about-box_img figure {
-    margin: 0;
+    margin: 0px;
 }
 .about .about-box_img figure img {
     width: 100%;
 }
-.padding_rl {padding: 0;}
-/** end about section **/
+
+.back-light {
+    background-color:  #d4d4d4;
+    
+}

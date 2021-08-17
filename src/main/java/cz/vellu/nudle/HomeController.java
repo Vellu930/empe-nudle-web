@@ -20,7 +20,7 @@ public class HomeController {
     private MailerService mailer;
 
     @GetMapping
-    public String greeting(@ModelAttribute Form form, Model model) {
+    public String loadForm(@ModelAttribute Form form, Model model) {
         model.addAttribute("form", form);
         return "home";
     }
@@ -33,10 +33,14 @@ public class HomeController {
         String mailTo = "5580f25f35-0092af@inbox.mailtrap.io";
         String mailFrom = form.getEmail();
         String name = form.getFirstName() + " " + form.getSurname();
+        String phone = form.getPhone();
         String region = form.getRegion();
+        String city = form.getCity();
+        String address = form.getAddress();
+        String psc = form.getPsc();
         String message = form.getMessage();
-        mailer.sendEmail(message, "New message from "+name+ ", region: "+region, mailFrom, mailTo);
-        model.addAttribute("success", "Email sent! Thank you!");
+        mailer.sendEmail(message, name, mailFrom, mailTo, phone, address, city, region, psc);
+        model.addAttribute("success", "Email odeslan. Dekuji!");
         return "home";
     }
 }

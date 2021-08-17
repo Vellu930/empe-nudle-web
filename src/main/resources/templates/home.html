@@ -1,128 +1,135 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html xmlns:th="http://www.thymeleaf.org">
     <head>
         <title>EMPE - nudle z Klatov</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/bootstrap.css" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/myStyle.css" >
+        <link rel="stylesheet" href="css/myStyle.css">
     </head>
-    <body>
+
+    <body data-spy="scroll" data-target=".navbar" data-offset="50">
         <!-- navigation -->
         <header>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar fixed-top navbar-expand-lg navbar-light scrolling-navbar">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#">
-                        <img src="/images/logoEMPE.png" alt="Logo" style="width:80px;">
+                        <img src="/images/logoEMPE.png" alt="Logo" style="width:50px;">
                     </a>
                     <h3> Nudle co maj vejce! </h3>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul class="navbar-nav ml-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                            <li class="nav-item active px-3">
+                                <a class="nav-link" data-scroll href="#home">Domů <span class="sr-only">(current)</span></a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Produkty</a>
+                            <li class="nav-item px-3">
+                                <a class="nav-link" data-scroll href="#products">Produkty</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">O nas</a>
+                            <li class="nav-item px-3">
+                                <a class="nav-link spacing" data-scroll href="#about">O nás</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Objednavky</a>
+                            <li class="nav-item px-3">
+                                <a class="nav-link spacing" data-scroll href="#recipes">Recepty</a>
+                            <li class="nav-item px-3">
+                                <a class="nav-link" data-scroll href="#form">Objednávky</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Kontakt</a>
+                            </li>
+                            <li class="nav-item px-3">
+                                <a class="nav-link" data-scroll href="#contact">Kontakt</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
         </header>
-
         <!-- welcome section -->
-
-        <div class="container-fluid">
-            <div class="jumbotron">
-                <h4 >Jedine nudle <br> z domacich cerstvych <br> vajec.</h4>
-                <p class="lead">Kdo je zna, kvalitu pozna. <br> Objednejte nize a ochutnejte take!</p>
-                <h1 class="display-2">Prava ceska <br> klasika!</h1>
-                <!-- <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a> -->
-            </div>
+        <div class="container-fuild pb-5">
+            <div id="home"><hr style="border-top-color: white;"></div>
+        </div>
+        <div class="jumbotron-fluid px-5 p-5">
+            <h2 class="text-center"> Jediné nudle z domácích čerstvých vajec na trhu.</h2>
+            <h1 class="display-2 pt-5">Pravá česká <br/> klasika!</h1>
+            <p class="lead">Kdo je jednou ochutná, uz nebude chtít jiné! <br/> Objednejte si a ochutnejte také!</p>
         </div>
 
         <!-- product cards -->
 
-        <div class="container-fluid padding">
-            <div class="row welcome text-center">
+        <div class="container-fuild p-3">
+            <div id="products"><hr></div>
+        </div>
+        <div class="container-fluid pt-5">
+            <div class="row text-center">
                 <div class="col-12">
-                    <h1> Vyber toho nejlepsiho </h1>
-                    <hr> 
-                    <p></p>
+                    <h1> Nudle všech druhů </h1>
+                    <hr>
+                </div>
+            </div>
+            <div class="row text-center px-4">
+                <div class="col-md-3 col-sm-6">
+                    <div class="card">
+                        <img src="/images/nudleVolneVertical.jpg" class="card-img-top" alt="product">
+                        <div class="card-body">
+                            <h5 class="card-title">Nudle do polévky</h5>
+                            <p class="card-text"> Tradiční tenké nudle do polévky. Balení 200g, 300g nebo 400g.</p>
+                            <button class="btn btn-outline-secondary">Kód: N1</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card">
+                        <img src="/images/libecek.jpg" class="card-img-top" alt="product">
+                        <div class="card-body">
+                            <h5 class="card-title">Nudle s libečkem</h5>
+                            <p class="card-text"> Tenké nudle do polévky s libečkem. Klasické české magi! Balení 200g.</p>
+                            <button class="btn btn-outline-secondary">Kód: N2</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card">
+                        <img src="/images/nudleSkloVert.jpg" class="card-img-top" alt="product">
+                        <div class="card-body">
+                            <h5 class="card-title">Nudle ve skle</h5>
+                            <p class="card-text"> Stejné těsto, stejná kvalita, jen tvarově jinačí a proto také levnější. Okraje ve skleněné ve 4-litrové nádobě. </p>
+                            <button class="btn btn-outline-secondary">Kód: N3</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card">
+                        <img src="/images/nudle1.jpg" class="card-img-top" alt="product">
+                        <div class="card-body">
+                            <h5 class="card-title">Fleky</h5>
+                            <p class="card-text">Široké nudle tzv. fleky. Balení 200g, 300g nebo 400g.
+                            </p>
+
+                            <button class="btn btn-outline-secondary">Kód: N4</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="container-fluid"> 
-            <div class="row align-middle">
-
-                <div class="col-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="/images/nudle1.jpg" class="card-img-top" alt="product">
-                        <div class="card-body">
-                            <h5 class="card-title">Nudle 01</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-outline-secondary">Order</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="/images/nudle1.jpg" class="card-img-top" alt="product">
-                        <div class="card-body">
-                            <h5 class="card-title">Nudle 01</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-outline-secondary">Order</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="/images/nudle1.jpg" class="card-img-top" alt="product">
-                        <div class="card-body">
-                            <h5 class="card-title">Nudle 01</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-outline-secondary">Order</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="/images/nudle1.jpg" class="card-img-top" alt="product">
-                        <div class="card-body">
-                            <h5 class="card-title">Nudle 01</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-outline-secondary">Order</a>
-                        </div>
-                    </div>
+        <!-- about me section -->
+        <div class="container-fuild p-3">
+            <div id="about"><hr style="color: white"></div>
+        </div>
+        <div class="container-fluid pt-5">
+            <div class="row text-center">
+                <div class="col-12">
+                    <h1> Něco málo o mě </h1>
+                    <hr>
                 </div>
             </div>
-        </div> 
 
-        <!-- about me section -->
-
-        <div id="about" class="about">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                        <div class="about-box">
+            <div class="about"> 
+                <div class="row text-center">
+                    <div class="row col-md-6 col-sm-12">
+                        <div class="about-box p-4">
                             <h2>Kdo jsem?</h2>
                             <p>Mám rád dobré jídlo. Zvláště klasické české recepty. Vynikají nejen svou chutí, ale často také svojí jednoduchostí a někdy naopak i pracností. To je i případ klasických českých nudlí, které se svojí chutí a konzistencí nedají srovnat s tím, co je „k mání“ v obchodech.</p>
                             <p>Nevím, jak vznikla myšlenka tyhle klasické české nudle vyrábět, prostě jsem jednoho dne „začal krájet nudle“. Pěkně podle osvědčeného receptu, jen z mouky a čerstvých vajec. Pěkně klasicky – zadělat těsto, vyválet placku, nechat zavadnout a nakrájet na nudličky. Jen 1 kilo mouky a 10 čerstvých vajec, žádná barviva, žádný olej, nic dalšího. Jen vejce a mouka. </p>
@@ -137,35 +144,37 @@ and open the template in the editor.
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
 
         <!-- recipes -->
-        <div class="container-fluid padding">
-            <div class="row welcome text-center">
-                <div class="col-12">
-                    <h1> Me oblibene recepty </h1>
-                    <hr> 
-                    <p></p>
+        <div class="container-fuild p-3">
+            <div id="recipes"><hr style="border-top-color: white;"></div>
+        </div>
+        <div class="container-fluid pt-5">
+            <div class="row text-center">
+                <div id="recipes" class="col-12">
+                    <h1> Mé oblíbené recepty </h1>
+                    <hr>
                 </div>
             </div>
-        </div>
-        <div class="container-fluid">
             <div class="recipes">
                 <div class="d-flex justify-content-center">
                     <div class="row">
                         <div class="col-md-6 col-sm-12">
                             <div class="box">
-                                <p class="lead"> Recept 1: <b> Nudle s makem </b> </p>
-                                <p> Široké nudle uvaříme v osolené vodě a scedíme. Nasypeme na talíř, posypeme podle chuti moučkovým cukrem a mletým mákem. Na závěr polijeme rozpuštěným máslem.
+                                <p class="lead"> Recept 1: <b> Nudle s mákem </b> </p>
+                                <p> Široké nudle uvaříme v osolené vodě a scedíme. Nasypeme na talíř, posypeme podle chuti moučkovým
+                                    cukrem a mletým mákem. Na závěr polijeme rozpuštěným máslem.
                                     Mák můžeme nahradit Grankem nebo kakaem, mňam, mňam… </p>
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-12">
                             <div class="box">
                                 <p class="lead"> Recept 2: <b> Nudle s houbami </b> </p>
-                                <p>Široké nudle uvaříme v osolené vodě a scedíme. Čerstvé houby nakrájíme na kousky a podusíme na másle, mírně osolíme. Smícháme s uvařenými nudlemi. Podle chuti možno dochutit několika kapkami polévkového koření (Klasik). <br>
+                                <p>Široké nudle uvaříme v osolené vodě a scedíme. Čerstvé houby nakrájíme na kousky a podusíme na másle,
+                                    mírně osolíme. Smícháme s uvařenými nudlemi. Podle chuti možno dochutit několika kapkami polévkového
+                                    koření (Klasik). <br>
                                     Místo čerstvých hub můžeme použít i sušené. Hrst sušených hub krátce podusíme na másle s trochou vody.
                                     Podle chuti můžete přimíchat jemně nakrájenou slaninu. </p>
                             </div>
@@ -174,86 +183,145 @@ and open the template in the editor.
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- contact & orders form -->
-
-    <div class="container-fluid padding">
-        <div class="row welcome text-center">
-            <div class="col-12">
-                <h1> Napiste mi! </h1>
-                <hr> 
+        <!-- contact & orders form -->
+        <div class="container-fuild p-3">
+            <div id="form"><hr style="border-top-color: white;"></div>
+        </div>
+        <div class="container-fluid pt-5">
+            <div class="row text-center">
+                <div id="form" class="col-12">
+                    <h1> Pište a objednávejte </h1>
+                    <hr>
+                </div>
             </div>
         </div>
-    </div>
-    <form action="#" th:action="@{/}" method="post" th:object="${form}">
-        <h3> Piste mi sve objednavky nebo dotazy. Tesim se na Vase zpravy! </h3>
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="firstName">Jmeno *</label>
-                <input type="text" class="form-control" id="firstName" th:field="*{firstName}">
+        <form class="mx-5 p-5" action="" th:action="@{/home}" method="post" th:object="${form}">
+            <p class="lead"> Napište mi své objedvánky nebo dotazy. Těším se na Vaše zprávy! </p>
+            <div class="form-row">
+                <div class="form-group col-md-5 ">
+                    <label for="firstName">Jméno *</label>
+                    <input type="text" class="form-control" id="firstName" th:field="*{firstName}">
+                </div>
+                <div class="form-group col-md-5 ">
+                    <label for="surname">Příjmení *</label>
+                    <input type="text" class="form-control" id="surname" th:field="*{surname}">
+                </div>
             </div>
-            <div class="form-group col-md-6">
-                <label for="surname">Prijmeni *</label>
-                <input type="text" class="form-control" id="surname" th:field="*{surname}">
+            <div class="form-row">
+                <div class="form-group col-md-5">
+                    <label for="inputEmail">Email *</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="venca@email.cz" th:field="*{email}">
+                </div>
+                <div class="form-group col-md-5">
+                    <label for="phone">Telefon </label>
+                    <input type="text" class="form-control" id="phone" th:field="*{phone}">
+                </div>
             </div>
-        </div>
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="inputEmail">Email *</label>
-                <input type="email" class="form-control" id="inputAddress" placeholder="Dlouha 321" th:field="*{email}">
+            <div class="form-row">
+                <div class="form-group col-md-10">
+                    <label for="inputAddress">Adresa</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="Bystrozraka 321" th:field="*{address}">
+                </div>
             </div>
-            <div class="form-group col-md-6">
-                <label for="phone">Telefon </label>
-                <input type="text" class="form-control" id="phone" th:field="*{phone}">
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="inputCity">Město</label>
+                    <input type="text" class="form-control" id="inputCity" th:field="*{city}">
+                </div>
+                <div class="form-group col-md-4 ">
+                    <label for="inputState">Kraj</label>
+                    <select id="inputState" class="form-control" th:field="*{region}">
+                        <option value="Nic" selected>Vyberte kraj</option>
+                        <option value="Praha">Hlavní město Praha</option>
+                        <option value="Jihočeský">Jihočeský</option>
+                        <option value="Jihomoravský">Jihomoravský</option>
+                        <option value="Karlovarský">Karlovarský</option>
+                        <option value="Vysočina">Vysočina</option>
+                        <option value="Královéhradecký">Královéhradecký</option>
+                        <option value="Liberecký">Liberecký</option>
+                        <option value="Moravskoslezský">Moravskoslezský</option>
+                        <option value="Olomoucký">Olomoucký</option>
+                        <option value="Pardubický">Pardubický</option>
+                        <option value="Plzeňský">Plzeňský</option>
+                        <option value="Středočeský">Středočeský</option>
+                        <option value="Ústecký">Ústecký</option>
+                        <option value="Zlínský">Zlínský</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-2 ">
+                    <label for="inputZip">PSČ</label>
+                    <input type="text" class="form-control" id="inputZip" th:field="*{psc}">
+                </div>
             </div>
-        </div>
-
-        <div class="form-group">
-            <label for="inputAddress">Adresa</label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="adresa" th:field="*{address}">
-        </div>
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="inputCity">Mesto</label>
-                <input type="text" class="form-control" id="inputCity" th:field="*{city}">
+            <div class="form-row">
+                <div class="form-group col-md-10">
+                    <label for="comment">Zpráva * (Pro objedvánky mi prosím napište kód produktu, množství a balení.)</label>
+                    <textarea class="form-control" rows="5" id="comment" th:field="*{message}"></textarea>
+                </div>
             </div>
-            <div class="form-group col-md-4">
-                <label for="inputState">Region</label>
-                <select id="inputState" class="form-control" th:field="*{region}">
-                    <option value="Null" selected>Vyberte region</option>
-                    <option value="Plzensky">Plzensky</option>
-                    <option value="Jihocesky">Jihocesky</option>
-                    <option value="Praha">Praha</option>
-                    <option value="Morava">Morava</option>
-                </select>
+            <button type="submit" class="btn btn-secondary">Odeslat</button>
+            <h2 th:text="${success}"></h2>
+        </form>
+
+        <!-- contact info with google map -->
+        <footer>
+            <div class="container-fuild p-3">
+                <div id="contact"><hr style="border-top-color: white;"></div>
             </div>
-            <div class="form-group col-md-2">
-                <label for="inputZip">PSC</label>
-                <input type="text" class="form-control" id="inputZip" th:field="*{psc}">
+            <div class="container-fluid mt-2 pt-4">
+                <div class="row text-center">
+                    <div class="col-12">
+                        <h1> Kontakt </h1>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row text-center p-2">
+                    <div class="col-md-4">
+                        <p class="lead">
+                            Kontakt info:
+                        </p>
+                        <p>
+                            Milan Ptáček <br/>
+                            Tel: +420777006964,<br/> 
+                            +420704525683 <br/>
+                            Email: 55milanptacek@seznam.cz
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <p class="lead">
+                            Adresa provozovny: <br/>
+                            Klatovy, Jateční 839 
+                        </p>
+                        <p>
+                            Otevírací hodiny: </br>
+                            Každou sobotu <br/> 9.00  -  11.00 hod.
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <div style="text-decoration:none; overflow:hidden;max-width:100%;width:400px;height:250px;"><div id="mymap-canvas" style="height:100%; width:100%;max-width:100%;">
+                                <iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/search?q=Klatovy,+Jateční+839&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+                            </div><a class="googlecode" href="https://www.embed-map.com" id="grabmap-info">https://www.embed-map.com</a><style>#mymap-canvas img{max-width:none!important;background:none!important;font-size: inherit;font-weight:inherit;}</style></div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <label for="comment">Koment *</label>
-            <textarea class="form-control" rows="5" id="comment" th:field="*{message}"></textarea>
-        </div>
-        <button type="submit" class="btn btn-secondary">Odeslat</button>
-        <h2 th:text="${success}" ></h2>
-    </form>
+            <div class="back-light">
+                <div class="container-fluid p-3">
+                    <div class="row text-center">
+                        <div class="col-12">
+                            <p> Website made by <a href="" style="color: #000;"> @Vellu </a> using Bootstrap 4.6 </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+                integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+    </body>
 
-    <!-- contact info with google map -->
-
-
-    <!-- footer --> 
-    <footer>
-        <p> Follow me on social media: </p>
-        <p> Some additional info about me and my work. </p>
-    </footer>
-
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-
-</body>
 </html>

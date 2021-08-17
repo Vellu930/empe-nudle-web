@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:remove="all">Template for HTML email with image</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+        <p>
+            Dobry den, Milane!
+        </p>
+        <h4>
+            Mate novou zpravu od <b th:text="${name}"></b> 
+        </h4>
+        <u>Zprava od zakaznika: </u> <br/>
+        <p th:text="${message}">Cau, tak tady mas ty webovky. Kdyz nekdo vyplni formular, prijde ti tahle zprava. Muzes to zkusit sam. Dole je odkaz. </p>
+        <hr>
+        <u> Kontakt na zakaznika: </u>
+        <span th:text="${'adresa: ' +adresa+ ', ' +mesto+ ', ' +psc}"></span> <br/>
+        <span th:text="${'region: ' +region}"></span> <br/>
+        <span th:text="${'telefon: ' + telefon}"></span> <br/>
+        <span th:text="${'email: ' +email}"></span><br/>
+        <p>
+            Zdravi, <br />
+            <em>Vellu Java Service</em>
+        </p>
+        <p> <b>
+                EMPE nudle <br/> </b>
+            Milan Ptacek <br/>
+            Adresa <br/>
+            telefon <br/>
+            <a href="web.heroku.com"> EMPE web </a>
+        </p>
+    </body>
+</html>
