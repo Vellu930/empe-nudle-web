@@ -215,6 +215,7 @@
                 <div class="form-group col-md-5">
                     <label for="inputEmail">Email *</label>
                     <input type="email" class="form-control" id="inputEmail" placeholder="venca@email.cz" th:field="*{email}">
+                    <p class="alert alert-danger" th:if="${#fields.hasErrors('email')}" th:errors="*{email}" />
                 </div>
                 <div class="form-group col-md-5">
                     <label for="phone">Telefon </label>
@@ -264,7 +265,8 @@
                 </div>
             </div>
             <button type="submit" class="btn btn-secondary">Odeslat</button>
-            <h2 th:text="${success}"></h2>
+            <h2 th:text="${success}" class="text-success"></h2>
+            <h2 th:text="${failure}" class="text-danger"></h2>
         </form>
 
         <!-- contact info with google map -->
