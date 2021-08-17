@@ -5,6 +5,12 @@
 
 html {
 }
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
 @font-face {
   font-family: funkyFont;
   src: url("fonts/ninifont-regular.otf");
@@ -31,9 +37,16 @@ html {
 }
 .jumbotron-fluid {
     font-family: "Trebuchet MS", Helvetica, sans-serif;
+    background-image: url("/images/eggsPhotoPix.jpg");
+    background-size: cover;
+    box-shadow: 5px 5px 7px rgba(0,0,0,0.6);
+    height: 100vh;
 }
 .jumbotron-fluid h1 {
     font-family: funkyFont, "Trebuchet MS", sans-serif;
+    color: #333333;
+    text-shadow: -1px 1px 5px rgba(0,0,0,0.89);
+    
 }
 .jumbotron-fluid h2 {
     padding: 20px;
@@ -69,12 +82,6 @@ form {
     background: rgba(255, 165, 0, 0.5);
 }
 
-.jumbotron-fluid {
-    background-image: url("/images/eggsPhotoPix.jpg");
-    background-size: cover;
-    box-shadow: 5px 5px 7px rgba(0,0,0,0.6);
-    height: 500px;
-}
 
 /** about section **/
 .about {

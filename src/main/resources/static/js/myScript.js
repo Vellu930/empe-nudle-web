@@ -1,6 +1,5 @@
 
-const scroll = new SmoothScroll('.navbar a[href*="#"]') {
-    speed: 800
-};
 
-
+function addtext(string) {
+    document.getElementById('comment').value += "\n Kod " + string;
+}

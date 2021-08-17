@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/bootstrap.css" crossorigin="anonymous">
         <link rel="stylesheet" href="css/myStyle.css">
+        <script src="js/myScript.js"></script>
     </head>
 
     <body data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -52,7 +53,7 @@
         </div>
         <div class="jumbotron-fluid px-5 p-5">
             <h2 class="text-center"> Jediné nudle z domácích čerstvých vajec na trhu.</h2>
-            <h1 class="display-2 pt-5">Pravá česká <br/> klasika!</h1>
+            <h1 style="font-size:10vw;" class="pt-4">Pravá česká <br/> klasika!</h1>
             <p class="lead">Kdo je jednou ochutná, uz nebude chtít jiné! <br/> Objednejte si a ochutnejte také!</p>
         </div>
 
@@ -75,7 +76,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Nudle do polévky</h5>
                             <p class="card-text"> Tradiční tenké nudle do polévky. Balení 200g, 300g nebo 400g.</p>
-                            <button class="btn btn-outline-secondary">Kód: N1</button>
+                            <button onClick="addtext('N1');" class="btn btn-outline-secondary">Kód: N1</button>
                         </div>
                     </div>
                 </div>
@@ -84,8 +85,8 @@
                         <img src="/images/libecek.jpg" class="card-img-top" alt="product">
                         <div class="card-body">
                             <h5 class="card-title">Nudle s libečkem</h5>
-                            <p class="card-text"> Tenké nudle do polévky s libečkem. Klasické české magi! Balení 200g.</p>
-                            <button class="btn btn-outline-secondary">Kód: N2</button>
+                            <p class="card-text"> Tenké nudle do polévky s libečkem. Klasické české magi! Pouze v balení 200g.</p>
+                            <button onClick="addtext('N2');" class="btn btn-outline-secondary">Kód: N2</button>
                         </div>
                     </div>
                 </div>
@@ -95,7 +96,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Nudle ve skle</h5>
                             <p class="card-text"> Stejné těsto, stejná kvalita, jen tvarově jinačí a proto také levnější. Okraje ve skleněné ve 4-litrové nádobě. </p>
-                            <button class="btn btn-outline-secondary">Kód: N3</button>
+                            <button onClick="addtext('N3');" class="btn btn-outline-secondary">Kód: N3</button>
                         </div>
                     </div>
                 </div>
@@ -107,7 +108,7 @@
                             <p class="card-text">Široké nudle tzv. fleky. Balení 200g, 300g nebo 400g.
                             </p>
 
-                            <button class="btn btn-outline-secondary">Kód: N4</button>
+                            <button onClick="addtext('N4');" class="btn btn-outline-secondary">Kód: N4</button>
                         </div>
                     </div>
                 </div>
@@ -196,7 +197,7 @@
                 </div>
             </div>
         </div>
-        <form class="mx-5 p-5" action="" th:action="@{/home}" method="post" th:object="${form}">
+        <form class="mx-5 p-5" action="" th:action="@{/home#form}" method="post" th:object="${form}" name="myform">
             <p class="lead"> Napište mi své objedvánky nebo dotazy. Těším se na Vaše zprávy! </p>
             <div class="form-row">
                 <div class="form-group col-md-5 ">
@@ -257,7 +258,7 @@
             <div class="form-row">
                 <div class="form-group col-md-10">
                     <label for="comment">Zpráva * (Pro objedvánky mi prosím napište kód produktu, množství a balení.)</label>
-                    <textarea class="form-control" rows="5" id="comment" th:field="*{message}"></textarea>
+                    <textarea id="comment" value="Zdravim" class="form-control" rows="5" th:field="*{message}"> Hello where is the default text? </textarea>
                 </div>
             </div>
             <button type="submit" class="btn btn-secondary">Odeslat</button>
