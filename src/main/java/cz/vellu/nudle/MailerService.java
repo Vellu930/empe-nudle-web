@@ -71,7 +71,7 @@ public class MailerService {
             MimeMessage mimeMessage = sender.createMimeMessage();
             MimeMessageHelper helper = new MimeMessageHelper(mimeMessage, true, "UTF-8");
             helper.setSubject("Nova zprava od: " + name);
-            helper.setFrom(from);
+            helper.setFrom("NudleMail@sandbox-379cf6e8-8186-4143-aa3b-a601871a896e.mailertogo.net");
             helper.setTo(to);
             helper.setText(build(), true);
 

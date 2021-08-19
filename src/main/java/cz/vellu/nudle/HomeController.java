@@ -32,7 +32,7 @@ public class HomeController {
         if (result.hasErrors()) {
             throw new ValidationException("Validation exception");
         }
-        String mailTo = "55milanptacek@seznam.cz";
+        String mailTo = "vellaipuraaa@gmail.com";
         String mailFrom = form.getEmail();
         String name = form.getFirstName() + " " + form.getSurname();
         String phone = form.getPhone();
