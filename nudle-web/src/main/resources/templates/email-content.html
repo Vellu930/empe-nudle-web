@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+        <div th:object="${formModel}">
+            <p>Dobry den!</p>
+            <p> Mate novou zpravu od zákazníka: <b th:text="*{contactPerson.firstname} +' '+ *{contactPerson.surname}"></b> </p> <br/>
+            <h4 th:text="*{message}"></h4>
+            <u> Kontakt na zakaznika: </u> <br/>
+            <span th:text="'adresa: ' + *{contactPerson.address} + ', ' + *{contactPerson.city} + ', ' + *{contactPerson.psc}"> 'adresa: ' </span> <br/>
+            <span th:text="'region: ' + *{contactPerson.region}"></span> <br/>
+            <span th:text="'telefon: ' + *{contactPerson.phone}"></span> <br/>
+            <span th:text="'email: ' + *{contactPerson.email}"></span><br/>
+        </div>
+
+        <p>
+            Zdravi, <br />
+            <em>Spring Mailer Service</em>
+        </p>
+
+        <p>
+            <b>S pozdravem EMPE nudle <br/> </b>
+            navstivte nas EMPE web: <br/>
+            <a href="empenudle.herokuapp.com"> empenudle.herokuapp.com </a>
+        </p>
+    </body>
+</html>
